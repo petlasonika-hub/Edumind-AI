@@ -4,6 +4,107 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>EduMind AI | Student Intelligence</title>
+
+/* EduMind AI Login Page */
+.login-screen {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #f5f7fc;
+  font-family: Arial, sans-serif;
+}
+
+.login-left {
+  background: linear-gradient(135deg, #171c35, #6757e8);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+}
+
+.login-left h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.login-left p {
+  line-height: 1.8;
+  color: #e5e0ff;
+}
+
+.login-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+.login-box {
+  background: white;
+  padding: 35px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px #00000010;
+}
+
+.login-box h2 {
+  color: #17223b;
+  margin-bottom: 8px;
+}
+
+.login-box p {
+  color: #71809a;
+  font-size: 14px;
+}
+
+.login-box label {
+  display: block;
+  margin-top: 18px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 7px;
+  border: 1px solid #e1e6f0;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.login-box button {
+  width: 100%;
+  margin-top: 22px;
+  padding: 13px;
+  background: #6757e8;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#loginMessage {
+  color: #d43f52;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+@media (max-width: 700px) {
+  .login-screen {
+    grid-template-columns: 1fr;
+  }
+
+  .login-left {
+    padding: 30px;
+  }
+
+  .login-left h1 {
+    font-size: 32px;
+  }
+}
 <style>
 :root{--bg:#f5f7fc;--panel:#fff;--ink:#17223b;--muted:#71809a;--purple:#6757e8;--purple2:#eeeaff;--teal:#17a895;--line:#e7ebf3;--orange:#f59e0b;--red:#e45767}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink)}button,input,select{font:inherit}button{cursor:pointer;border:0;border-radius:11px;padding:11px 15px;font-weight:650}.app{display:grid;grid-template-columns:245px 1fr;min-height:100vh}.sidebar{background:#171c35;color:#fff;padding:26px 17px;display:flex;flex-direction:column;gap:25px}.brand{font-size:21px;font-weight:800;letter-spacing:-.5px;padding:0 10px}.brand span{color:#a99fff}.brand small{display:block;color:#9ea8c4;font-size:10px;letter-spacing:2px;margin-top:5px}.nav{display:grid;gap:7px}.nav button{background:transparent;color:#b9c2dc;text-align:left;padding:13px 12px;font-weight:550}.nav button.active,.nav button:hover{background:#2a3053;color:#fff}.side-bottom{margin-top:auto;color:#aab4cf;font-size:12px;line-height:1.7;padding:10px}.main{padding:27px 32px;min-width:0}.top{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-bottom:26px}.eyebrow{font-size:11px;color:var(--purple);font-weight:800;letter-spacing:1.7px;text-transform:uppercase}.top h1{font-size:27px;margin:7px 0 0;letter-spacing:-.8px}.profile{display:flex;align-items:center;gap:11px;background:#fff;padding:9px 13px;border:1px solid var(--line);border-radius:14px}.avatar{width:38px;height:38px;border-radius:12px;background:var(--purple2);color:var(--purple);display:grid;place-items:center;font-weight:800}.profile small{display:block;color:var(--muted);margin-top:3px}.hero{background:linear-gradient(115deg,#6555e8,#8c76f4);border-radius:21px;padding:25px 28px;color:#fff;display:flex;justify-content:space-between;gap:20px;align-items:center;box-shadow:0 14px 35px #6a5ae52b}.hero h2{margin:8px 0;font-size:24px}.hero p{color:#e6e2ff;max-width:600px;line-height:1.6;margin:0 0 17px}.hero button{background:#fff;color:#5e4cdb}.hero-bubble{min-width:120px;height:120px;border-radius:50%;border:1px solid #ffffff6b;display:grid;place-items:center;text-align:center;background:#ffffff16}.hero-bubble strong{font-size:28px;display:block}.hero-bubble span{font-size:11px;color:#e6e2ff}.grid{display:grid;gap:16px;margin-top:19px}.stats{grid-template-columns:repeat(4,minmax(0,1fr))}.card{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:19px;min-width:0}.stat-label{color:var(--muted);font-size:12px}.stat-value{font-size:27px;font-weight:800;margin:12px 0 7px;letter-spacing:-.6px}.stat-foot{font-size:11px;color:var(--teal)}.two{grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr)}.section-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:17px}.section-head h3{margin:0;font-size:16px}.subtle{color:var(--muted);font-size:12px}.recommend{background:#f8f7ff;border:1px solid #e8e3ff;border-radius:13px;padding:15px;display:flex;gap:12px;margin:12px 0}.rec-icon{width:40px;height:40px;border-radius:12px;background:#e9e4ff;display:grid;place-items:center;font-size:19px;flex-shrink:0}.recommend h4{margin:0 0 5px;font-size:14px}.recommend p{font-size:12px;color:var(--muted);line-height:1.55;margin:0 0 10px}.primary{background:var(--purple);color:white}.soft{background:var(--purple2);color:var(--purple)}.skill{margin:16px 0}.skill-line{display:flex;justify-content:space-between;font-size:12px;margin-bottom:8px}.bar{height:8px;background:#edf0f7;border-radius:99px;overflow:hidden}.bar span{display:block;height:100%;border-radius:99px;background:var(--purple)}.bar .warn{background:var(--orange)}.bar .good{background:var(--teal)}.task{display:flex;align-items:flex-start;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}.task:last-child{border:0}.task input{accent-color:var(--purple);margin-top:4px}.task strong{font-size:13px}.task small{display:block;color:var(--muted);font-size:11px;margin-top:5px}.pill{border-radius:99px;padding:5px 8px;font-size:10px;font-weight:800;margin-left:auto;white-space:nowrap}.pill.red{background:#ffe8eb;color:#c93d4e}.pill.amber{background:#fff1d7;color:#a76700}.pill.green{background:#dcf7ef;color:#087d6c}.view{display:none}.view.active{display:block}.view-title{margin:0 0 7px;font-size:24px}.view-intro{margin:0 0 20px;color:var(--muted);line-height:1.6}.field{display:grid;gap:7px;margin:13px 0}.field label{font-size:12px;font-weight:700}.field input,.field select{border:1px solid var(--line);border-radius:10px;padding:12px;background:#fff;color:var(--ink);width:100%}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}.result{background:#f1fbf8;border:1px solid #d1f0e6;padding:15px;border-radius:12px;margin-top:15px;line-height:1.6}.question{padding:16px 0;border-bottom:1px solid var(--line)}.question p{font-weight:700;font-size:14px}.question label{display:block;font-size:13px;padding:7px;color:#4d5a73}.question input{accent-color:var(--purple);margin-right:7px}.notice{font-size:11px;color:var(--muted);margin-top:16px;line-height:1.6}.table{width:100%;border-collapse:collapse;font-size:12px}.table th,.table td{text-align:left;padding:13px 8px;border-bottom:1px solid var(--line)}.table th{color:var(--muted);font-weight:600}.gapnum{color:var(--red);font-weight:800}.mini-cards{grid-template-columns:repeat(3,minmax(0,1fr))}.mini-cards .card{padding:16px}.mini-cards h4{margin:0 0 9px}.mini-cards p{font-size:12px;line-height:1.6;color:var(--muted)}.hidden{display:none!important}
@@ -12,7 +113,52 @@
 </style>
 </head>
 <body>
-<div class="app">
+  
+<!-- LOGIN PAGE -->
+<div class="login-screen" id="loginScreen">
+
+  <div class="login-left">
+    <h1>EduMind AI</h1>
+    <h2>Your Learning. Your Future.</h2>
+    <p>
+      Improve your academic performance, develop
+      new skills, and prepare for your dream career
+      with personalized student guidance.
+    </p>
+  </div>
+
+  <div class="login-right">
+    <div class="login-box">
+      <h2>Welcome Back!</h2>
+      <p>Sign in to continue to your dashboard.</p>
+
+      <form id="loginForm">
+        <label for="loginEmail">Email Address</label>
+        <input
+          type="email"
+          id="loginEmail"
+          placeholder="Enter your email"
+          required
+        />
+
+        <label for="loginPassword">Password</label>
+        <input
+          type="password"
+          id="loginPassword"
+          placeholder="Enter your password"
+          required
+        />
+
+        <button type="submit">Login to Dashboard</button>
+        <div id="loginMessage" role="status"></div>
+      </form>
+    </div>
+  </div>
+
+</div>
+<!-- END LOGIN PAGE -->
+
+<div class="app" id="mainApp" style="display:none">
 <aside class="sidebar">
   <div class="brand">EduMind <span>AI</span><small>STUDENT INTELLIGENCE</small></div>
   <nav class="nav" aria-label="Main navigation">
@@ -128,6 +274,32 @@ function renderCareer(){let rows=Object.entries(targets).map(([name,target])=>({
 function generatePlan(){let h=Number(el("availableHours").value);if(h<=0){showResult("planResult","Enter at least 1 hour.");return}let goal=el("mainGoal").value;let tasks=goal==="academic"?[["Revise a weak syllabus topic",.4],["Solve topic questions",.35],["Quick self-test",.25]]:goal==="gate"?[["Study one GATE concept",.4],["Solve previous-year questions",.4],["Review mistakes",.2]]:goal==="internship"?[["Practise DSA problems",.4],["Build or improve a project",.35],["Review resume / interview topic",.25]]:[["Practise DSA problems",.4],["Build a small Git-backed project",.35],["Review one interview concept",.25]];let html=tasks.map(t=>`<div style="margin:8px 0">• <strong>${t[0]}</strong> — ${Math.max(10,Math.round(h*60*t[1]))} min</div>`).join("");showResult("planResult",`<strong>Your ${h}-hour plan</strong>${html}<small>Suggested because it balances practice, hands-on work and review. Adjust it around classes and deadlines.</small>`)}
 function rescueMode(){let w=Number(el("workload").value),t=Number(el("rescueTime").value),over=Math.max(0,w-t);let msg=over===0?"Your workload fits the available time. Start with the highest-priority deadline.":`You have a <strong>${over}-hour overload</strong>. <br><br><strong>1. MUST DO:</strong> urgent graded work and near deadlines.<br><strong>2. START NOW:</strong> the next important task with a long duration.<br><strong>3. SCHEDULE:</strong> career practice in a smaller protected block.<br><strong>4. CAN DELAY:</strong> low-impact tasks with flexible deadlines.<br><br>Why: this protects urgent commitments before lower-priority work.`;showResult("rescueResult",msg)}
 renderSkills();
+
+const loginForm = document.getElementById("loginForm");
+
+loginForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const email = document
+    .getElementById("loginEmail")
+    .value.trim();
+
+  const password = document
+    .getElementById("loginPassword")
+    .value;
+
+  const message = document.getElementById("loginMessage");
+
+  // Demo login only; not secure authentication.
+  if (email && password.length >= 6) {
+    document.getElementById("loginScreen").style.display = "none";
+    document.getElementById("mainApp").style.display = "grid";
+    message.textContent = "";
+  } else {
+    message.textContent =
+      "Enter a valid email and password with at least 6 characters.";
+  }
+});
 </script>
 </body>
 </html>
