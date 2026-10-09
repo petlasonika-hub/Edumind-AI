@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EduMind AI | Student Intelligence</title>
+<style>
+:root{--bg:#f5f7fc;--panel:#fff;--ink:#17223b;--muted:#71809a;--purple:#6757e8;--purple2:#eeeaff;--teal:#17a895;--line:#e7ebf3;--orange:#f59e0b;--red:#e45767}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink)}button,input,select{font:inherit}button{cursor:pointer;border:0;border-radius:11px;padding:11px 15px;font-weight:650}.app{display:grid;grid-template-columns:245px 1fr;min-height:100vh}.sidebar{background:#171c35;color:#fff;padding:26px 17px;display:flex;flex-direction:column;gap:25px}.brand{font-size:21px;font-weight:800;letter-spacing:-.5px;padding:0 10px}.brand span{color:#a99fff}.brand small{display:block;color:#9ea8c4;font-size:10px;letter-spacing:2px;margin-top:5px}.nav{display:grid;gap:7px}.nav button{background:transparent;color:#b9c2dc;text-align:left;padding:13px 12px;font-weight:550}.nav button.active,.nav button:hover{background:#2a3053;color:#fff}.side-bottom{margin-top:auto;color:#aab4cf;font-size:12px;line-height:1.7;padding:10px}.main{padding:27px 32px;min-width:0}.top{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-bottom:26px}.eyebrow{font-size:11px;color:var(--purple);font-weight:800;letter-spacing:1.7px;text-transform:uppercase}.top h1{font-size:27px;margin:7px 0 0;letter-spacing:-.8px}.profile{display:flex;align-items:center;gap:11px;background:#fff;padding:9px 13px;border:1px solid var(--line);border-radius:14px}.avatar{width:38px;height:38px;border-radius:12px;background:var(--purple2);color:var(--purple);display:grid;place-items:center;font-weight:800}.profile small{display:block;color:var(--muted);margin-top:3px}.hero{background:linear-gradient(115deg,#6555e8,#8c76f4);border-radius:21px;padding:25px 28px;color:#fff;display:flex;justify-content:space-between;gap:20px;align-items:center;box-shadow:0 14px 35px #6a5ae52b}.hero h2{margin:8px 0;font-size:24px}.hero p{color:#e6e2ff;max-width:600px;line-height:1.6;margin:0 0 17px}.hero button{background:#fff;color:#5e4cdb}.hero-bubble{min-width:120px;height:120px;border-radius:50%;border:1px solid #ffffff6b;display:grid;place-items:center;text-align:center;background:#ffffff16}.hero-bubble strong{font-size:28px;display:block}.hero-bubble span{font-size:11px;color:#e6e2ff}.grid{display:grid;gap:16px;margin-top:19px}.stats{grid-template-columns:repeat(4,minmax(0,1fr))}.card{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:19px;min-width:0}.stat-label{color:var(--muted);font-size:12px}.stat-value{font-size:27px;font-weight:800;margin:12px 0 7px;letter-spacing:-.6px}.stat-foot{font-size:11px;color:var(--teal)}.two{grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr)}.section-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:17px}.section-head h3{margin:0;font-size:16px}.subtle{color:var(--muted);font-size:12px}.recommend{background:#f8f7ff;border:1px solid #e8e3ff;border-radius:13px;padding:15px;display:flex;gap:12px;margin:12px 0}.rec-icon{width:40px;height:40px;border-radius:12px;background:#e9e4ff;display:grid;place-items:center;font-size:19px;flex-shrink:0}.recommend h4{margin:0 0 5px;font-size:14px}.recommend p{font-size:12px;color:var(--muted);line-height:1.55;margin:0 0 10px}.primary{background:var(--purple);color:white}.soft{background:var(--purple2);color:var(--purple)}.skill{margin:16px 0}.skill-line{display:flex;justify-content:space-between;font-size:12px;margin-bottom:8px}.bar{height:8px;background:#edf0f7;border-radius:99px;overflow:hidden}.bar span{display:block;height:100%;border-radius:99px;background:var(--purple)}.bar .warn{background:var(--orange)}.bar .good{background:var(--teal)}.task{display:flex;align-items:flex-start;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}.task:last-child{border:0}.task input{accent-color:var(--purple);margin-top:4px}.task strong{font-size:13px}.task small{display:block;color:var(--muted);font-size:11px;margin-top:5px}.pill{border-radius:99px;padding:5px 8px;font-size:10px;font-weight:800;margin-left:auto;white-space:nowrap}.pill.red{background:#ffe8eb;color:#c93d4e}.pill.amber{background:#fff1d7;color:#a76700}.pill.green{background:#dcf7ef;color:#087d6c}.view{display:none}.view.active{display:block}.view-title{margin:0 0 7px;font-size:24px}.view-intro{margin:0 0 20px;color:var(--muted);line-height:1.6}.field{display:grid;gap:7px;margin:13px 0}.field label{font-size:12px;font-weight:700}.field input,.field select{border:1px solid var(--line);border-radius:10px;padding:12px;background:#fff;color:var(--ink);width:100%}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}.result{background:#f1fbf8;border:1px solid #d1f0e6;padding:15px;border-radius:12px;margin-top:15px;line-height:1.6}.question{padding:16px 0;border-bottom:1px solid var(--line)}.question p{font-weight:700;font-size:14px}.question label{display:block;font-size:13px;padding:7px;color:#4d5a73}.question input{accent-color:var(--purple);margin-right:7px}.notice{font-size:11px;color:var(--muted);margin-top:16px;line-height:1.6}.table{width:100%;border-collapse:collapse;font-size:12px}.table th,.table td{text-align:left;padding:13px 8px;border-bottom:1px solid var(--line)}.table th{color:var(--muted);font-weight:600}.gapnum{color:var(--red);font-weight:800}.mini-cards{grid-template-columns:repeat(3,minmax(0,1fr))}.mini-cards .card{padding:16px}.mini-cards h4{margin:0 0 9px}.mini-cards p{font-size:12px;line-height:1.6;color:var(--muted)}.hidden{display:none!important}
+@media(max-width:900px){.app{grid-template-columns:1fr}.sidebar{padding:15px;gap:12px}.nav{grid-template-columns:repeat(4,minmax(0,1fr))}.nav button{font-size:11px;text-align:center;padding:10px 4px}.side-bottom{display:none}.main{padding:22px 16px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.two{grid-template-columns:1fr}.hero-bubble{min-width:90px;height:90px}.mini-cards{grid-template-columns:1fr}}
+@media(max-width:500px){.top{align-items:flex-start}.top h1{font-size:22px}.profile .profile-text{display:none}.hero{padding:20px}.hero h2{font-size:20px}.hero-bubble{display:none}.form-grid{grid-template-columns:1fr}.nav{grid-template-columns:repeat(4,minmax(0,1fr))}.card{padding:15px}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand">EduMind <span>AI</span><small>STUDENT INTELLIGENCE</small></div>
+  <nav class="nav" aria-label="Main navigation">
+    <button class="active" data-view="dashboard">▦ &nbsp; Dashboard</button>
+    <button data-view="academic">▤ &nbsp; Academic Journey</button>
+    <button data-view="assessment">◎ &nbsp; Assessments</button>
+    <button data-view="skills">◇ &nbsp; Skills</button>
+    <button data-view="career">↗ &nbsp; Career</button>
+    <button data-view="planner">☷ &nbsp; Planner</button>
+    <button data-view="insights">✧ &nbsp; AI Insights</button>
+  </nav>
+  <div class="side-bottom">From academic confusion<br/>to career readiness.<br/><br/>Prototype • Demo data</div>
+</aside>
+<main class="main">
+<header class="top"><div><div class="eyebrow">STUDENT WORKSPACE / 2026</div><h1 id="pageHeading">Your growth, at a glance.</h1></div><div class="profile"><div class="avatar" id="avatar">B</div><div class="profile-text"><strong id="profileName">Bhavana</strong><small id="profileMeta">3rd Year · CSE / AI</small></div></div></header>
+
+<section class="view active" id="dashboard">
+  <div class="hero"><div><div class="eyebrow" style="color:#e5e0ff">YOUR NEXT BEST ACTION</div><h2>Small steps. Strong future.</h2><p id="heroReason">Your DSA and Git scores show the biggest career gaps. Focus on one practical task today to move closer to your goal.</p><button onclick="showView('planner')">View today's plan &nbsp; →</button></div><div class="hero-bubble"><div><strong id="readinessHero">64%</strong><span>CAREER READY</span></div></div></div>
+  <div class="grid stats">
+    <div class="card"><div class="stat-label">ACADEMIC PROGRESS</div><div class="stat-value">72%</div><div class="stat-foot">↑ Keep your weekly rhythm</div></div>
+    <div class="card"><div class="stat-label">CAREER READINESS</div><div class="stat-value" id="readinessStat">64%</div><div class="stat-foot">Based on demo skill profile</div></div>
+    <div class="card"><div class="stat-label">STRONGEST SKILL</div><div class="stat-value">Python</div><div class="stat-foot">72% verified demo score</div></div>
+    <div class="card"><div class="stat-label">BIGGEST SKILL GAP</div><div class="stat-value">Git</div><div style="font-size:11px;color:var(--red)">30% current · practice needed</div></div>
+  </div>
+  <div class="grid two">
+    <div class="card"><div class="section-head"><h3>What should I learn next?</h3><span class="subtle">AI recommendation</span></div>
+      <div class="recommend"><div class="rec-icon">⌘</div><div><h4>DSA: Arrays & Problem Solving</h4><p>Your DSA score is 48%, which is currently below the target for a software developer. Practise a few array problems, then reassess.</p><button class="primary" onclick="showView('assessment')">Start assessment</button></div></div>
+      <div class="recommend"><div class="rec-icon">⌁</div><div><h4>Git: Core workflow</h4><p>Your Git score is 30%. Learn commit, push, pull and branches, then complete a small repository task.</p><button class="soft" onclick="showView('skills')">Improve skills</button></div></div>
+    </div>
+    <div class="card"><div class="section-head"><h3>Today's study plan</h3><span class="subtle">3 actions</span></div>
+      <div class="task"><input type="checkbox"/><div><strong>DSA — Arrays practice</strong><small>45 min · Biggest career gap</small></div><span class="pill red">HIGH</span></div>
+      <div class="task"><input type="checkbox"/><div><strong>DBMS — Normalization revision</strong><small>30 min · Reinforce application</small></div><span class="pill amber">MED</span></div>
+      <div class="task"><input type="checkbox"/><div><strong>Git — Create a repository</strong><small>25 min · Practical skill building</small></div><span class="pill green">SKILL</span></div>
+      <p class="notice">Demo recommendations are rule-based examples, not predictions from a trained AI model.</p>
+    </div>
+  </div>
+</section>
+
+<section class="view" id="academic">
+  <h2 class="view-title">My Academic Journey</h2><p class="view-intro">Track semester topics and mark what you have completed. This prototype uses a sample CSE / AI syllabus.</p>
+  <div class="grid two">
+    <div class="card"><div class="section-head"><h3>3rd Year · Semester 5</h3><span class="pill green">72% complete</span></div>
+      <div class="task"><input type="checkbox" checked/><div><strong>Database Management Systems</strong><small>Normalization · SQL · Transactions</small></div></div>
+      <div class="task"><input type="checkbox"/><div><strong>Data Structures & Algorithms</strong><small>Arrays · Trees · Graphs</small></div></div>
+      <div class="task"><input type="checkbox" checked/><div><strong>Artificial Intelligence</strong><small>Search · Knowledge representation</small></div></div>
+      <div class="task"><input type="checkbox"/><div><strong>Operating Systems</strong><small>Processes · Memory management</small></div></div>
+    </div>
+    <div class="card"><h3>Study schedule builder</h3><p class="subtle">Create a simple daily study target.</p>
+      <div class="field"><label>Topic to study</label><input id="studyTopic" value="DSA — Arrays"/></div>
+      <div class="field"><label>Available time (minutes)</label><input id="studyMinutes" type="number" min="10" value="45"/></div>
+      <button class="primary" onclick="addStudyTask()">Add to today's plan</button><div id="studyResult" class="result hidden"></div>
+    </div>
+  </div>
+</section>
+
+<section class="view" id="assessment">
+  <h2 class="view-title">Topic Assessment</h2><p class="view-intro">Answer these sample questions to see a score and a suggested next step. This is a demo assessment, not a validated AI diagnosis.</p>
+  <div class="card"><div class="section-head"><h3>DSA Basics: Arrays</h3><span class="pill amber">3 questions</span></div>
+    <form id="quizForm">
+      <div class="question"><p>1. What is the usual index of the first element in a Python list?</p><label><input type="radio" name="q1" value="0" required/>1</label><label><input type="radio" name="q1" value="1"/>0</label><label><input type="radio" name="q1" value="0"/>-1</label></div>
+      <div class="question"><p>2. Which operation accesses an element by its index?</p><label><input type="radio" name="q2" value="1" required/>list[index]</label><label><input type="radio" name="q2" value="0"/>list.search()</label><label><input type="radio" name="q2" value="0"/>index.list()</label></div>
+      <div class="question"><p>3. What is the time complexity of accessing an array/list element by index in the usual array model?</p><label><input type="radio" name="q3" value="1" required/>O(1)</label><label><input type="radio" name="q3" value="0"/>O(n)</label><label><input type="radio" name="q3" value="0"/>O(n²)</label></div>
+      <button class="primary" type="submit">Submit assessment</button>
+    </form><div id="quizResult" class="result hidden" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="view" id="skills">
+  <h2 class="view-title">My Skill Passport</h2><p class="view-intro">A snapshot of the student's current demonstrated skill scores. Edit a score to see how the profile responds.</p>
+  <div class="grid two">
+    <div class="card"><div class="section-head"><h3>Verified skill scores</h3><span class="subtle">Sample data</span></div><div id="skillList"></div></div>
+    <div class="card"><h3>Run a skill check</h3><p class="subtle">Choose a skill and enter a practice-test score.</p>
+      <div class="field"><label>Skill</label><select id="skillChoice"><option>Python</option><option>Java</option><option>SQL</option><option>DSA</option><option>Git</option><option>Problem Solving</option></select></div>
+      <div class="field"><label>Assessment score (0–100)</label><input type="number" id="skillScore" min="0" max="100" value="70"/></div>
+      <button class="primary" onclick="updateSkill()">Save verified score</button><div id="skillResult" class="result hidden"></div>
+    </div>
+  </div>
+</section>
+
+<section class="view" id="career">
+  <h2 class="view-title">My Career Goal</h2><p class="view-intro">Compare sample skill levels with the suggested target for a Software Developer. Adjust scores in Skill Passport to update this view.</p>
+  <div class="card"><div class="section-head"><h3>Software Developer · Skill gap analysis</h3><span class="pill amber">Priority gaps highlighted</span></div><div style="overflow:auto"><table class="table"><thead><tr><th>Skill</th><th>Target</th><th>Current</th><th>Gap</th></tr></thead><tbody id="careerTable"></tbody></table></div></div>
+  <div class="grid mini-cards"><div class="card"><h4>Biggest strength</h4><strong id="bigStrength">Python</strong><p>Your highest current skill score in this demo.</p></div><div class="card"><h4>Top priority</h4><strong id="bigGap">Git</strong><p>Start with practical exercises and retest.</p></div><div class="card"><h4>Next milestone</h4><strong>3 small projects</strong><p>Apply your skills in practical work to build evidence.</p></div></div>
+</section>
+
+<section class="view" id="planner">
+  <h2 class="view-title">AI Daily Action Plan</h2><p class="view-intro">A realistic plan should balance weak topics, career relevance and the time you have available.</p>
+  <div class="grid two"><div class="card"><h3>Build your plan</h3><div class="field"><label>Available study time today (hours)</label><input type="number" id="availableHours" min="1" max="16" value="2"/></div><div class="field"><label>Today's main goal</label><select id="mainGoal"><option value="career">Improve placement skills</option><option value="academic">Prepare for semester exams</option><option value="gate">Prepare for GATE</option><option value="internship">Prepare for internship</option></select></div><button class="primary" onclick="generatePlan()">Generate daily plan</button><div id="planResult" class="result hidden"></div></div>
+  <div class="card"><h3>Rescue Mode</h3><p class="subtle">Check whether your planned workload fits your available time.</p><div class="field"><label>Remaining workload (hours)</label><input id="workload" type="number" min="0" value="8"/></div><div class="field"><label>Available time (hours)</label><input id="rescueTime" type="number" min="0" value="4"/></div><button class="primary" onclick="rescueMode()">Check workload</button><div id="rescueResult" class="result hidden"></div></div></div>
+</section>
+
+<section class="view" id="insights">
+  <h2 class="view-title">AI Insights</h2><p class="view-intro">Actionable explanations based on the sample profile. In a production version, these should be generated from stored assessments and student history.</p>
+  <div class="grid mini-cards"><div class="card"><h4>✦ Practical learning</h4><strong>Practice more, not just read</strong><p>Your sample Python theory level is higher than some practical scores. Build a small program and debug it.</p></div><div class="card"><h4>↗ Career gap</h4><strong id="insightGap">Git needs attention</strong><p>Use a small repository project to practise the essential Git workflow.</p></div><div class="card"><h4>◷ Workload balance</h4><strong>Prioritize realistically</strong><p>Finish urgent tasks first, then protect a short daily slot for long-term skills.</p></div></div>
+  <div class="card" style="margin-top:16px"><h3>Why this recommendation?</h3><p id="insightReason" style="line-height:1.7;color:var(--muted)">The demo recommends the skill with the largest gap between the current score and target score. Real AI can be integrated later for richer explanations.</p></div>
+</section>
+<footer class="notice">EduMind AI hackathon prototype · Sample data only · No login, cloud database, or real AI API is connected yet.</footer>
+</main></div>
+<script>
+const titles={dashboard:"Your growth, at a glance.",academic:"Your academic journey.",assessment:"Understand what you know.",skills:"Build your Skill Passport.",career:"Turn skills into career readiness.",planner:"Make your next step clear.",insights:"Insights that lead to action."};
+let skills={"Python":72,"Java":61,"SQL":65,"DSA":48,"Git":30,"Problem Solving":54};
+const targets={"Python":80,"Java":70,"SQL":70,"DSA":80,"Git":60,"Problem Solving":75};
+function showView(id){document.querySelectorAll(".view").forEach(v=>v.classList.toggle("active",v.id===id));document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.view===id));document.getElementById("pageHeading").textContent=titles[id]||"EduMind AI";window.scrollTo({top:0,behavior:"smooth"});}
+document.querySelectorAll(".nav button").forEach(b=>b.addEventListener("click",()=>showView(b.dataset.view)));
+function el(id){return document.getElementById(id)}
+function showResult(id,html){el(id).innerHTML=html;el(id).classList.remove("hidden")}
+function addStudyTask(){let topic=el("studyTopic").value.trim();let mins=Number(el("studyMinutes").value);if(!topic||mins<=0){showResult("studyResult","Please enter a topic and a valid study time.");return}showResult("studyResult",`Added <strong>${escapeHtml(topic)}</strong> for <strong>${mins} minutes</strong> to your demo plan. Prioritize it if it addresses a weak area or an upcoming deadline.`)}
+function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+el("quizForm").addEventListener("submit",e=>{e.preventDefault();let data=new FormData(e.target);let score=[data.get("q1"),data.get("q2"),data.get("q3")].reduce((a,b)=>a+Number(b),0);let pct=Math.round(score/3*100);let advice=pct===100?"Great work. Try a harder problem involving array traversal and edge cases.":pct>=67?"Good start. Review the missed concept, then try two application questions.":"Revisit array indexing and element access, then retake this short assessment.";showResult("quizResult",`<strong>Score: ${pct}% (${score}/3)</strong><br>${advice}<br><small>Demo diagnosis based on this quiz only.</small>`)});
+function renderSkills(){el("skillList").innerHTML=Object.entries(skills).map(([name,val])=>`<div class="skill"><div class="skill-line"><span>${name}</span><strong>${val}%</strong></div><div class="bar"><span class="${val>=70?'good':val<50?'warn':''}" style="width:${val}%"></span></div></div>`).join("");renderCareer()}
+function updateSkill(){let name=el("skillChoice").value;let val=Number(el("skillScore").value);if(!Number.isFinite(val)||val<0||val>100){showResult("skillResult","Enter a score from 0 to 100.");return}skills[name]=val;renderSkills();showResult("skillResult",`Saved demo verified score for <strong>${name}: ${val}%</strong>. Your career gap table has been updated.`)}
+function renderCareer(){let rows=Object.entries(targets).map(([name,target])=>({name,target,current:skills[name],gap:Math.max(0,target-skills[name])}));el("careerTable").innerHTML=rows.sort((a,b)=>b.gap-a.gap).map(r=>`<tr><td>${r.name}</td><td>${r.target}%</td><td>${r.current}%</td><td class="${r.gap>=20?'gapnum':''}">${r.gap}%</td></tr>`).join("");let best=[...rows].sort((a,b)=>b.current-a.current)[0],worst=[...rows].sort((a,b)=>b.gap-a.gap)[0];el("bigStrength").textContent=best.name;el("bigGap").textContent=worst.name;el("insightGap").textContent=worst.name+" needs attention";el("insightReason").textContent=`${worst.name} has the largest gap in this demo: current ${worst.current}%, target ${worst.target}%. Start with a small practical exercise, then retest to measure improvement.`}
+function generatePlan(){let h=Number(el("availableHours").value);if(h<=0){showResult("planResult","Enter at least 1 hour.");return}let goal=el("mainGoal").value;let tasks=goal==="academic"?[["Revise a weak syllabus topic",.4],["Solve topic questions",.35],["Quick self-test",.25]]:goal==="gate"?[["Study one GATE concept",.4],["Solve previous-year questions",.4],["Review mistakes",.2]]:goal==="internship"?[["Practise DSA problems",.4],["Build or improve a project",.35],["Review resume / interview topic",.25]]:[["Practise DSA problems",.4],["Build a small Git-backed project",.35],["Review one interview concept",.25]];let html=tasks.map(t=>`<div style="margin:8px 0">• <strong>${t[0]}</strong> — ${Math.max(10,Math.round(h*60*t[1]))} min</div>`).join("");showResult("planResult",`<strong>Your ${h}-hour plan</strong>${html}<small>Suggested because it balances practice, hands-on work and review. Adjust it around classes and deadlines.</small>`)}
+function rescueMode(){let w=Number(el("workload").value),t=Number(el("rescueTime").value),over=Math.max(0,w-t);let msg=over===0?"Your workload fits the available time. Start with the highest-priority deadline.":`You have a <strong>${over}-hour overload</strong>. <br><br><strong>1. MUST DO:</strong> urgent graded work and near deadlines.<br><strong>2. START NOW:</strong> the next important task with a long duration.<br><strong>3. SCHEDULE:</strong> career practice in a smaller protected block.<br><strong>4. CAN DELAY:</strong> low-impact tasks with flexible deadlines.<br><br>Why: this protects urgent commitments before lower-priority work.`;showResult("rescueResult",msg)}
+renderSkills();
+</script>
+</body>
+</html>
